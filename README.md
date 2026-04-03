@@ -48,19 +48,18 @@ A robust, secure, and highly optimized REST API built for a finance dashboard sy
 ## ⚙️ Local Setup Instructions (Criteria 7)
 
 ### 1. Clone the repository
-\`\`\`bash
+```bash
 git clone https://github.com/rahulvandrangi09/finance-dashboard-backend.git
 cd finance-dashboard-backend
-\`\`\`
-
+```
 ### 2. Install dependencies
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 ### 3. Environment Variables
 Create a `.env` file in the root directory and configure the following variables:
-\`\`\`env
+```bash
 # PostgreSQL Connection String
 DATABASE_URL="postgresql://<username>:<password>@localhost:5432/finance_db?schema=public"
 
@@ -69,21 +68,21 @@ JWT_SECRET="your_super_secret_key"
 
 # Application Port
 PORT=3000
-\`\`\`
+```
 
 ### 4. Database Setup
 Run the following commands to generate the Prisma client and push the schema to your PostgreSQL database:
-\`\`\`bash
+```bash
 npx prisma generate
 npx prisma db push
-\`\`\`
+```
 
 ### 5. Start the Server
-\`\`\`bash
+```bash
 npm run dev
 # OR
 node src/server.js
-\`\`\`
+```
 
 ## 🎯 Additional Thoughtfulness (Criteria 8)
 To improve usability, clarity, and system reliability beyond the core requirements, I implemented:
