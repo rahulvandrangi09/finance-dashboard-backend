@@ -38,6 +38,11 @@ app.use("/api/auth", authRoutes);
 app.use("/api/records", recordRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 
+// homepage
+app.get("/", (req, res) => {
+  res.send("Welcome to the Dashboard API! Please use /api/auth to login.");
+});
+
 // heatlh
 app.get("/health", (req, res) => {
   res.status(200).json({ status: "ok", message: "Server is healthy" });
