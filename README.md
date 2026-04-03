@@ -39,7 +39,7 @@ A robust, secure, and highly optimized REST API built for a finance dashboard sy
 │   └── server.js             # Express application entry point
 ├── .env                      # Environment variables (ignored in git)
 └── package.json
-
+```
 ## 🧠 Design Decisions, Assumptions, & Tradeoffs (Criteria 7)
 * **Database Tradeoff:** PostgreSQL was chosen over NoSQL. While NoSQL is faster for unstructured data, a relational database is much safer for financial data to ensure strict relational integrity between Users and their Financial Records.
 * **Access Control Assumption:** I assumed that `VIEWER` roles should only see aggregated dashboard data (not individual raw transactions), while `ANALYST` roles can view raw records but cannot modify them. Only `ADMIN` users can create, update, or delete records.
